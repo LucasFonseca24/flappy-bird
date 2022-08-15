@@ -1,0 +1,128 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Slackey&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+:root{
+    --fontgame: 'Press Start 2P', cursive;
+    --fontsquare: 'Slackey', cursive;
+}
+
+
+#game-board{
+    background-color: transparent;
+    width: 650px;
+    height: 600px;
+
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    background-image: url(imagens/fundo1.jpg);
+    background-size: cover;
+    background-position: bottom center;
+    border-radius: 2px;
+    box-shadow: 2px 2px 13px black;
+    border: 1px solid black;
+}
+
+#start{
+    font-family: var(--fontgame);
+    font-weight: normal;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: gold;
+    padding: 8px;
+    border: 4px solid goldenrod;
+    border-radius: 7px;
+    box-shadow: 2px 2px 9px black;
+    cursor: pointer;
+    z-index: 5;
+}
+
+#start:hover{
+    background-color: yellow;
+}
+#start:active{
+    color: aliceblue;
+}
+
+#pontuacao{
+    position: absolute;
+    z-index: 4;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-family: var(--fontsquare);
+    font-size: 2.4em;
+}
+    
+#best{
+    position: absolute;
+    z-index: 4;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-family: var(--fontsquare);
+    font-size: 1.5em;
+    
+}
+
+
+#bird{
+    position: absolute;
+    z-index: 0;
+    width: 18.34%;
+    top: 20%;
+    left:25%;
+    z-index: 2;
+
+}
+
+.birdvoador{
+    animation: voalek infinite 0.6s linear ;
+}
+
+
+.pipe{
+    z-index: 1;
+    position: absolute;
+    height: 85%;
+    width: 35%;
+    animation: pipeanimation normal 5s linear;
+}
+
+
+@keyframes voalek{
+    0%{
+        top: 20%;
+    }
+    33%{
+        top: 22%;
+    }
+    66%{
+        top: 18%;
+    }
+    100%{
+        top: 20%;
+    }
+}
+
+@keyframes pipeanimation{
+    from{
+        right: -76.92%;
+    }to{
+        right: 92.3%;
+    }
+}
+
+
+
